@@ -7,9 +7,10 @@ public class InputValue {
     public Converting.UnitConversed unitConversed;
 
     public InputValue(Factors factors) {
+        UnitCovert unitCovert=new UnitCovert(factors.getValueType());
         this.value=factors.getValue();
-        this.unitConversed= Converting.UnitConversed.FEET;
-    }
+        this.unitConversed=unitCovert.getType();
+         }
 
     @Override
     public boolean equals(Object o) {
